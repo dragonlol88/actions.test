@@ -1,0 +1,12 @@
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Workflow Dispatch
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
