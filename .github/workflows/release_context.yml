@@ -12,7 +12,7 @@ jobs:
         with:
           python-version: "3.8"
       - name: Deploy 42maru pypi
-      - uses: ./.github/actions/deploy
+        uses: ./.github/actions/deploy
         with:
           token: ${{ secrets.PYPI_SECRET }}
         env:
