@@ -1,6 +1,6 @@
 on:
   release:
-    type: [created,deleted]
+    types: [created,deleted]
 jobs:
   one:
     runs-on: ubuntu-latest
