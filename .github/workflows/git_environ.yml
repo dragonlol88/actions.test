@@ -1,4 +1,5 @@
 on:
+  push:
   workflow_dispatch:
 jobs:
   one:
@@ -9,7 +10,7 @@ jobs:
       - name: GITHUB_ACTION_PATH
         run: echo "$GITHUB_ACTION_PATH"
       - name: GITHUB_ACTIONS
-        run: echo "GITHUB_ACTIONS"
+        run: echo "$GITHUB_ACTIONS"
       - name: GITHUB_ACTOR
         run: echo "$GITHUB_ACTOR"
       - name: GITHUB_REPOSITORY
