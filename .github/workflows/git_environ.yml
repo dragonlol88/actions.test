@@ -17,33 +17,33 @@ jobs:
       - name: GITHUB_EVENT_NAME
         run: echo "$GITHUB_EVENT_NAME"
       - name: GITHUB_EVENT_PATH
-          run: echo "$GITHUB_EVENT_PATH"
+        run: echo "$GITHUB_EVENT_PATH"
       - name: GITHUB_WORKSPACE
-          run: echo "$GITHUB_WORKSPACE"
+        run: echo "$GITHUB_WORKSPACE"
       - name: GITHUB_SHA
-          run: echo "$GITHUB_SHA"
+        run: echo "$GITHUB_SHA"
       - name: GITHUB_REF
-          run: echo "$GITHUB_REF"
+        run: echo "$GITHUB_REF"
       - name: GITHUB_EVENT_NAME
-          run: echo "$GITHUB_EVENT_NAME"
+        run: echo "$GITHUB_EVENT_NAME"
       - name: GITHUB_HEAD_REF
-          run: echo "$GITHUB_HEAD_REF"
+        run: echo "$GITHUB_HEAD_REF"
       - name: GITHUB_BASE_REF
-          run: echo "$GITHUB_BASE_REF"
+        run: echo "$GITHUB_BASE_REF"
       - name: GITHUB_SERVER_URL
-          run: echo "$GITHUB_SERVER_URL"
+        run: echo "$GITHUB_SERVER_URL"
       - name: GITHUB_API_URL
-          run: echo "$GITHUB_API_URL"
+        run: echo "$GITHUB_API_URL"
       - name: GITHUB_GRAPHQL_URL
-          run: echo "$GITHUB_GRAPHQL_URL"
+        run: echo "$GITHUB_GRAPHQL_URL"
       - name: RUNNER_NAME
-          run: echo "$RUNNER_NAME"
+        run: echo "$RUNNER_NAME"
       - name: RUNNER_OS
-          run: echo "$RUNNER_OS"
+        run: echo "$RUNNER_OS"
       - name: RUNNER_TEMP
-          run: echo "$RUNNER_TEMP"
+        run: echo "$RUNNER_TEMP"
       - name: RUNNER_TOOL_CACHE
-          run: echo "$RUNNER_TOOL_CACHE"
+        run: echo "$RUNNER_TOOL_CACHE"
 
 
 
