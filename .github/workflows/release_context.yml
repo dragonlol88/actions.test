@@ -5,7 +5,15 @@ jobs:
   one:
     runs-on: ubuntu-latest
     steps:
-      - name: Dump GitHub context
+      - uses: actions/checkout@v2
+      # Allow debugging with tmate
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: Deploy 42maru pypi
+      - uses: ./.github/actions/deploy
+        with:
+          token: ${{ secrets.PYPI_SECRET }}
         env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
