@@ -1,6 +1,5 @@
 on:
   release:
-      types: [published, created, edited, deleted]
 jobs:
   one:
     runs-on: ubuntu-latest
