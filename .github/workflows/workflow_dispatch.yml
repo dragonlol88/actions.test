@@ -1,7 +1,5 @@
 on:
-  push:
   workflow_dispatch:
-
 jobs:
   one:
     runs-on: ubuntu-latest
