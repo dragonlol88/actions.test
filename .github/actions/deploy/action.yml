@@ -1,0 +1,11 @@
+name: "deploy package test"
+description: "deploy package teest"
+author: "sunny <uram24@42maru.com>"
+inputs:
+  token:
+    description: 'Default GitHub Action token, used for the PR. Can be passed in using {{ secrets.GITHUB_TOKEN }}'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
