@@ -7,13 +7,13 @@ from pydantic import BaseModel, BaseSettings, SecretStr
 
 REGISTER_TMPL = ".github/ISSUE_TEMPLATE/register.md"
 UPDATE_TMPL   = ".github/ISSUE_TEMPLATE/update.md"
-DELETE_TMPL   = ".github/ISSUE_TEMPLATE/delete.md"
+DELETE_TMPL   = ".github/ISSUE_TEMPLATE/version_delete.md"
 
 TEMPLETE_REGEX_PATTERN = {
     "created":{
-        "title..package_name"   : rb'title: "(.*:)',
-        "labels.."               : rb'labels: (.*)',
-        "body.header."                 : rb'(## \xf0\x9f\x9f\xa2 .*\n|\xf0\x9f\x94\xb5 .*\n| \xf0\x9f\x94\xb4 .* )',
+        "title..package_name"  : rb'title: "(.*:)',
+        "labels.."             : rb'labels: (.*)',
+        "body.header."         : rb'(## \xf0\x9f\x9f\xa2 .*\n|\xf0\x9f\x94\xb5 .*\n| \xf0\x9f\x94\xb4 .* )',
         "body..package_name"   : rb'(- \*\*Package name :\*\* )',
         "body.release.tag_name": rb'(- \*\*Version :\*\* )',
         "body.release.author"  : rb'(- \*\*Author :\*\* )',
@@ -23,18 +23,19 @@ TEMPLETE_REGEX_PATTERN = {
         "body..link"           : rb'(- \*\*Link :\*\* )',
     },
     "updated": {
-        "title..package_name"   : rb'title: "(.*:)',
-        "labels.."               : rb'labels: (.*)',
+        "title..package_name"  : rb'title: "(.*:)',
+        "labels.."             : rb'labels: (.*)',
         "body.header."                 : rb'(## \xf0\x9f\x9f\xa2 .*\n|## \xf0\x9f\x94\xb5 .*\n|## \xf0\x9f\x94\xb4 .*\n)',
         "body..package_name"   : rb'(- \*\*Package name :\*\* )',
         "body.release.tag_name": rb'(- \*\*New version :\*\* )',
         "body..link"           : rb'(- \*\*Link for the new version :\*\* )',
     },
     "deleted": {
-        "title..package_name"   : rb'title: "(.*:)',
-        "labels.."               : rb'labels: (.*)',
-        "body.header."                 : rb'(## \xf0\x9f\x9f\xa2 .*\n|## \xf0\x9f\x94\xb5 .*\n|## \xf0\x9f\x94\xb4 .*\n)',
+        "title..package_name"  : rb'title: "(.*:)',
+        "labels.."             : rb'labels: (.*)',
+        "body.header."         : rb'(## \xf0\x9f\x9f\xa2 .*\n|## \xf0\x9f\x94\xb5 .*\n|## \xf0\x9f\x94\xb4 .*\n)',
         "body..package_name"   : rb'(- \*\*Package name :\*\* )',
+        "body..tag_name"       : rb'(- \*\*Delete version : :\*\* )',
 
     }
 }
